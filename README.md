@@ -28,3 +28,12 @@ required to support both cloud platforms).
 
 3. Write configuration scripts for building and no-downtime production deployment of
 this application, keeping in mind aspects that an SRE would have to consider.
+
+
+
+Request 	Purpose
+ GET        The most common method. A GET message is send, and the server returns data
+ POST	    Used to send HTML form data to the server. The data received by the POST method is not cached by the server.
+ HEAD	    Same as GET method, but no response body.
+ PUT	    Replace all current representations of the target resource with uploaded content.
+ DELETE	    Deletes all current representations of the target resource given by the URL.
