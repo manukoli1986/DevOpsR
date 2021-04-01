@@ -29,11 +29,12 @@ def index(userName):
         else: 
             nextBirthYear = today.year
         nextBirthday = dt.date(nextBirthYear, birth.month, birth.day)
-        if birth == today:
+        diff = nextBirthday - today
+        if ( today == birth.date() ):
             return jsonify({"message" : f"Hello, {userName}! Happy Birthday"})
         else:
-            diff = nextBirthday - today
-            return jsonify({"message" : f"Hello, {userName}! Your birthday is in {diff.days} days"})
+            # diff = nextBirthday - today
+            return jsonify({"message" : f"Hello, {userName}! Your birthday is in {diff.days} days."})
         
 
 if __name__=="__main__":
