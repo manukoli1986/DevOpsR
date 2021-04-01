@@ -1,3 +1,7 @@
+# Add Swagger generator for python flask api  - https://www.youtube.com/watch?v=iZ2Tah3IxQc
+# Deploy it on DOcker or Lamba or beanstalk 
+# CICD for this application
+
 # DevOpsR
 
 1. Design and code a simple "Hello World" application that exposes the following
@@ -37,3 +41,9 @@ Request 	Purpose
  HEAD	    Same as GET method, but no response body.
  PUT	    Replace all current representations of the target resource with uploaded content.
  DELETE	    Deletes all current representations of the target resource given by the URL.
+
+
+
+ ################################
+
+
