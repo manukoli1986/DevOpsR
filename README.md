@@ -1,6 +1,7 @@
 # Add Swagger generator for python flask api  - https://www.youtube.com/watch?v=iZ2Tah3IxQc
-# Deploy it on DOcker or Lamba or beanstalk 
+# Deploy it on DOcker or Lamba or beanstalk
 # CICD for this application
+# This app must have tests
 
 # DevOpsR
 
