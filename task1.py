@@ -1,34 +1,36 @@
-import requests 
+# import requests 
 from flask import Flask,request, jsonify
 from tinydb import TinyDB, Query
-import datetime as dt
-
+from datetime import timedelta as td
+from datetime import datetime as dt
+import time
 app = Flask(__name__)
 app.config['DEBUG'] = True
 
 #Saving to DB
 db=TinyDB('./db.json')
 User = Query()
-today_date = dt.date.today()
+current_date = dt.now().date()
 
 @app.route('/hello/<string:userName>', methods=['GET', 'PUT'])
-
 def index(userName):
     if request.method == 'PUT':
         if request.headers['Content-Type'] == 'application/json':
             data = request.get_json()
             DOB = data['dateOfBirth'] 
-            db.insert({'name': userName, "dob": DOB})
+            db.upsert({'name': userName, "dob": DOB}, User.name == userName)
             return ('', 204)
         else:
             return ("Data MUST be in JSON Type")
-
-            
     if request.method == 'GET':
         searchValue = db.search(User.name == userName)
         newValue = searchValue[0]
         final = newValue['dob']
-        return jsonify({"message" : f"Hello, {userName}! Your birthday is on {today_date} days and you enered {final}"})
+        myDate = dt.strptime(final, '%Y-%m-%d')
+        myDob = myDate.date()
+        # delta = final2 - current_date
+        delta = current_date - myDob
+        return jsonify({"message" : f"Hello, {userName}! Your birthday is in {delta.days} days"})
 
 
 if __name__=="__main__":
