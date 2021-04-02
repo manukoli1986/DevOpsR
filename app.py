@@ -14,7 +14,9 @@ today = dt.date.today()
 
 @app.route('/', methods=['GET'])
 def home():
-    return ('''<h1>Hello World Application</h1><h2>DevOps Engineer Test</h2>
+    return ('''
+            <h1>Version : 1</h1>
+            <h1>Hello World Application</h1><h2>DevOps Engineer Test</h2>
             <p1>A Simple Hello World application that exposes GET and PUT api call.
             <br><strong><em>Hint</em>:</strong> This is a RESTful web service! Append a username to the URL after hello (for example: <code>/hello/mayank -d { "dateOfBirth" : "1988-12-01" }</code>) with data.</p1>\n'''
             )
