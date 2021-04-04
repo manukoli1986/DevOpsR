@@ -1,12 +1,6 @@
-# Add Swagger generator for python flask api  - https://www.youtube.com/watch?v=iZ2Tah3IxQc - https://github.com/thomaxxl/safrs
-# Deploy it on DOcker or Lamba or beanstalk
-# CICD for this application
-# This app must have tests
-
 # DevOpsR
 
-1. Design and code a simple "Hello World" application that exposes the following
-HTTP-based APIs:
+1. Designed a simple "Hello World" application that exposes the following HTTP-based APIs:
 Description: Saves/updates the given user’s name and date of birth in the database.
 Request: PUT /hello/<username> { “dateOfBirth”: “YYYY-MM-DD” }
 Response: 204 No Content
@@ -14,6 +8,7 @@ Note:
 <username> must contain only letters.
 YYYY-MM-DD must be a date before the today date.
 Description: Returns hello birthday message for the given user
+
 Request: Get /hello/<username>
 Response: 200 OK
 Response Examples:
