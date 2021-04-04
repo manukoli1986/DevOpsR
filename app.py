@@ -53,11 +53,13 @@ def index(userName):
                 # diff = nextBirthday - today
                 return jsonify({"message" : f"Hello, {userName}! Your birthday is in {diff.days} days."})
     except IndexError:
-        return "<h1><strong>NOTE:</strong> Username must contain only letters and make sure before GET request use PUT request to add dateOfBirth for username<h1>"            
+        return '''<strong><em>SORRY Page Not Found</em>:</strong>\n
+                <h1><strong>NOTE:</strong> Username must contain only letters and make sure before GET request use PUT request to add dateOfBirth for username<h1>'''     
 
 @app.errorhandler(404)
 def page_not_found(e):
-    return ('''<strong><em>Hint</em>:</strong> This is a RESTful web service! Append a username to the URL after hello (for example: <code>/hello/mayank -d { "dateOfBirth" : "1988-12-01" }</code>) with data.</p1>\n''')
+    return ('''<strong><em>SORRY Page Not Found</em>:</strong>\n
+                <strong><em>Hint</em>:</strong> This is a RESTful web service! Append a username to the URL after hello (for example: <code>/hello/mayank -d { "dateOfBirth" : "1988-12-01" }</code>) with data.</p1>\n''')
 
 if __name__=="__main__":
     app.run(host='0.0.0.0', port=80, debug=True)
