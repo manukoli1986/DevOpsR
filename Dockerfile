@@ -1,8 +1,6 @@
 # Using Base image alpine with installed python3
 FROM frolvlad/alpine-python3
 
-MAINTAINER "Mayank Koli"
-
 #choosing /usr/src/app as working directory
 WORKDIR /usr/src/app
 

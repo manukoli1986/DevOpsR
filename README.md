@@ -31,6 +31,21 @@ Note: Use storage/database of your choice.
 required to support both cloud platforms).
 
 
+It is possible to host commercial grade Flask application on AWS with EC2 instance. Launching EC2 instance is easy but resource management is an overhead. For better resource usage, Lambda and API Gateway is an alternative. But it comes with resource configuration overhead.
+
+AWS Elastic Beanstalk (EB) reduces management complexity without restricting choice or control. All we need to do is upload the application and EB itself handles the details of:
+Capacity provisioning
+Load balancing
+Scaling
+Application health monitoring
+
+a) Making a source bundle of your application code manually zipping it in a file and uploading it to Elastic Beanstalk.
+b) Using an already written script to make a zip file and uploading the same zip to Beanstalk. This is 95% similar to the first one, just saves you from the hassle of selecting multiple files and zipping them.
+c) Using the AWS Elastic Beanstalk CLI(command line interface to directly deploy from your local system)
+d) Configuring CI/CD in your local system and CircleCI (or some other CI/CD tool), so that anytime you push your code to a Git repository, it will get automatically deployed to Beanstalk.
+
+
+
 3. Write configuration scripts for building and no-downtime production deployment of
 this application, keeping in mind aspects that an SRE would have to consider.
 
