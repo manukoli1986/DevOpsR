@@ -66,7 +66,9 @@ $ eb create dev-flask-env --single -r ap-south-1
 ## To deploy in DEV Environment
 $ eb create dev-flask-env -r ap-south-1
 
-## Once Code is updated at my workstation then I can deploy in DEV environment by this command
+## Once Code is updated at my workstation then I can deploy in DEV environment by this command as 'eb cli' get code when is commited locally
+$ git add -A
+$ git commit -m "updating code"
 $ eb deploy dev-flask-env
 
 ## After satisfaction that everything is working fine then we can deploy in Prod Environment
