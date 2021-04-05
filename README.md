@@ -1,7 +1,5 @@
-# DevOpsR
-
-
-1. Designed a simple "Hello World" application that exposes the following HTTP-based APIs:
+# Designed a simple "Hello World" application that exposes the following HTTP-based APIs:
+=========================================================================================
 
 First Request: PUT /hello/<username> { “dateOfBirth”: “YYYY-MM-DD” }
 Second Request: Get /hello/<username>
@@ -24,6 +22,7 @@ The Code is pretty simple and easy to understand. Here we will explain the code 
 
 
 ### AWS Elastic Beanstalk
+--------------------------
 
 It is possible to host commercial grade Flask application on AWS with EC2 instance. Launching EC2 instance is easy but resource management is an overhead. For better resource usage, Lambda and API Gateway is an alternative. But it comes with resource configuration overhead.
 
@@ -46,6 +45,14 @@ Prerequisites to Deploy a New Flask app on AWS Elastic Beanstalk
 1. EB CLI
 2. AWS Key and Secret
 ```
+
+## Code Explaing
+- line 1 to 4, importing modules
+- line 6 to 13, Initiating app and creating object to use later
+- line 15 to 22, Created route if we hit APP URL only will print the instructions on page
+- Line 24 to 51, where the route for GET and PUT method are created and created the logic of app
+- Line 53 to 56, Created another route to handle any sort of error and print instructions
+- Line 58 to 59, Running the code as main which will expose on any IP address with 80 port and enabling debug mode as well for tracing logs of app
 
 ## steps
 ```
@@ -101,8 +108,9 @@ $ eb terminate prod-flask-env
 ```
 
 ## Extras
+---------
 
-Although there are multiple methods to Deploy on AWS Elastic Beanstalk to achieve this tasks which are mentioned below..
+Although there are multiple methods to Deploy on AWS to achieve this tasks which are mentioned below..
 
 1. CI/CD pipeline for deployment
 - Configuring CI/CD in your local system and CircleCI (or some other CI/CD tool), so that anytime you push your code to a Git repository, it will get automatically deployed to Beanstalk.
@@ -113,6 +121,17 @@ Although there are multiple methods to Deploy on AWS Elastic Beanstalk to achiev
 
 4. We can also create dockerized image and provision them on EKS/GCP as Pod with deployment strategy i.e. Blue-Green/Canary/Rollout strategies 
 
-5. Any tests to check for success or failure of the pipeline.
+5. With the help of Terraform/Terragrunt, Can deploy EC2/RDS/ELB/Auto-scaling and remote provisioner to deploy code on EC2.
+
+6. Any tests to check for success or failure of the pipeline.
 - We can take help for flask-unittest which is developed by Python (https://pypi.org/). A hassle free solution to testing flask application using unittest. The goal is to make test code by using a unit testing framework.
 - We can also use Docker Bench for Security for scanning the image and then upload it in private Repository (ECR/GCR)
+
+7. The project could be created in python virtual environment but I am working on local workstation where I developed the code. 
+
+
+## Upcoming Version
+====================
+- Swagger API - Flask-RESTPlus is an extension for Flask that adds support for quickly building REST APIs. It provides a coherent collection of decorators and tools to describe your API and expose its documentation properly (using Swagger)
+- Enable PyJWT - A Python library which allows you to encode and decode JSON Web Tokens (JWT)
+- Unit test cases
