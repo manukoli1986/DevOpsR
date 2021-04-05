@@ -62,17 +62,32 @@ Select a keypair.
 
 ## To deploy in DEV Environment
 $ eb create dev-flask-env --single -r ap-south-1
+![alt text](https://github.com/manukoli1986/DevOpsR/blob/main/images/2.jpg)
 
 ## To deploy in DEV Environment
-$ eb create dev-flask-env -r ap-south-1
+$ eb create prod-flask-env -r ap-south-1
+![alt text](https://github.com/manukoli1986/DevOpsR/blob/main/images/3.jpg)
+
+## To View deployed both Environment
+$ eb list --all
+![alt text](https://github.com/manukoli1986/DevOpsR/blob/main/images/1.jpg)
 
 ## Once Code is updated at my workstation then I can deploy in DEV environment by this command as 'eb cli' get code when is commited locally
 $ git add -A
 $ git commit -m "updating code"
 $ eb deploy dev-flask-env
+![alt text](https://github.com/manukoli1986/DevOpsR/blob/main/images/4.jpg)
 
 ## After satisfaction that everything is working fine then we can deploy in Prod Environment
 $ eb deploy prod-flask-env
+
+## Appliation Output
+When I am entering my DateOfBirt-01-12-1988 and getting the response
+![alt text](https://github.com/manukoli1986/DevOpsR/blob/main/images/5.jpg)
+
+When I am entering todays date and getting the response
+![alt text](https://github.com/manukoli1986/DevOpsR/blob/main/images/6.jpg)
+![alt text](https://github.com/manukoli1986/DevOpsR/blob/main/images/7.jpg)
 
 ## To Delete Environment
 $ eb terminate dev-flask-env
