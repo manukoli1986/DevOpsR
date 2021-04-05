@@ -1,7 +1,6 @@
 # Designed a simple "Hello World" application that exposes the following HTTP-based APIs:
-
-First Request: PUT /hello/<username> { “dateOfBirth”: “YYYY-MM-DD” }
-Second Request: Get /hello/<username>
+- First Request: PUT /hello/<username> { “dateOfBirth”: “YYYY-MM-DD” }
+- Second Request: Get /hello/<username>
 
 ## Solution: 
 To achieve this task, I am going to use python flask framework for exposing APIs (GET and PUT). I used multiple modules which is listed below.
