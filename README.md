@@ -106,6 +106,10 @@ $ eb terminate dev-flask-env
 $ eb terminate prod-flask-env
 ```
 
+## Architecture
+![alt text](https://github.com/manukoli1986/DevOpsR/blob/main/images/8.jpg)
+
+
 ## Extras
 ---------
 
