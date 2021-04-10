@@ -4,7 +4,7 @@ import datetime as dt
 from flask_restplus import Resource, Api
 
 app = Flask(__name__)
-
+api = Api(app)
 
 #Saving to DB
 db=TinyDB('./db.json')

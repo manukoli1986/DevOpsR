@@ -3,7 +3,7 @@
 - Second Request: Get /hello/<username>
 
 ## Solution: 
-To achieve this task, I am going to use python flask framework for exposing APIs (GET and PUT). I used multiple modules which is listed below.
+To achieve this task, I am going to use python(3.7.3) with flask framework and exposing APIs (GET and PUT). I used multiple modules which is listed below.
 
 ## Requirements
 
@@ -13,9 +13,7 @@ To achieve this task, I am going to use python flask framework for exposing APIs
 | Flask | == 0.12.2 |
 | werkzeug | == 0.16.1 |
 | flask-restplus | == 0.3.8 |
-| Flask-AWSCognito |== 1.3 |
 | Flask-RESTful | == 0.3.8 |
-| flask-restful-swagger-2 | == 0.35 |
 
 The Code is pretty simple and easy to understand. Here we will explain the code and will describe the steps to provision it on AWS Elastic Beanstalk Service in Dev and Prod Environment. For environment specific we create a load-balanced, scalable environment or a single-instance environment in Elastic Bean Stalk but here I am using Single-Instance for development and Load-balanced for Production Environment.
 
@@ -135,6 +133,5 @@ Although there are multiple methods to Deploy on AWS to achieve this tasks which
 
 ## Upcoming Version
 ====================
-- Swagger API - Flask-RESTPlus is an extension for Flask that adds support for quickly building REST APIs. It provides a coherent collection of decorators and tools to describe your API and expose its documentation properly (using Swagger)
 - Enable PyJWT - A Python library which allows you to encode and decode JSON Web Tokens (JWT)
 - Unit test cases

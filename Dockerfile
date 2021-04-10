@@ -15,5 +15,5 @@ EXPOSE 80
 COPY . .
 
 #Making default entry as python will launch api.py
-CMD [ "python3", "app.py" ]
+CMD [ "python3", "swagger.py" ]
 
