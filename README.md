@@ -104,6 +104,21 @@ $ eb terminate dev-flask-env
 $ eb terminate prod-flask-env
 ```
 
+## Swagger API
+```
+Just hit the provided URL from eb command and you will have page something like below
+```
+![alt text](https://github.com/manukoli1986/DevOpsR/blob/main/images/9.jpg)
+```
+Now try to out by providing the Date Of Birth and UserName and hit Execute
+```
+![alt text](https://github.com/manukoli1986/DevOpsR/blob/main/images/10.jpg)
+```
+Its time to check and verify the UserName that How many days are left for birthday
+```
+![alt text](https://github.com/manukoli1986/DevOpsR/blob/main/images/11.jpg)
+
+
 ## Architecture
 ![alt text](https://github.com/manukoli1986/DevOpsR/blob/main/images/8.jpg)
 
